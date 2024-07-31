@@ -21,7 +21,7 @@ html, body {
   height: 100%;
 }
 
-ul {
+ul, ol {
   list-style: none;
 }
 
@@ -42,6 +42,13 @@ a {
   padding: 0 10px;
 }
 
+.section-titel {
+  margin-bottom: 50px;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
 body {
   font-family: var(--font-family);
   font-size: 16px;
@@ -58,7 +65,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 5;
+  z-index: 10;
 }
 
 .header__inner {
@@ -79,8 +86,6 @@ body {
   text-transform: uppercase;
   font-weight: 700;
 }
-
-
 
 .footer {
   background-color:var(--black);
@@ -143,7 +148,8 @@ body {
   z-index: 5;
 }
 
-.titel {
+.title {
+  color: var(--white);
   padding-bottom: 40px;
   font-weight: 700;
   font-size: 96px;
@@ -191,4 +197,121 @@ body {
 .swiper-pagination-bullet-active {
   height: 6px;
   background-color: var(--white);
+}
+
+.why-lease {
+  padding: 150px 0;
+}
+
+.why-lease__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.why-lease__item-img {
+  margin-bottom: 30px;
+}
+
+.why-lease__item-titel {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.why-lease__item-text {
+  text-align: left;
+}
+
+.how-does {
+  padding-bottom: 159px;
+}
+
+.how-does__inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.how-does-subtitel {
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 50px;
+}
+
+.how-doest__list {
+  padding: 50px 0 70px;
+  counter-reset: myCount;
+}
+
+.how-does__item {
+  width: 270px;
+  position: relative;
+  margin-left: auto;
+  padding-left: 240px;
+  box-sizing:content-box;
+  padding: 19px 0 19px 240px;
+  min-height: 63px;
+}
+.how-does__item + .how-does__item {
+  margin-top: 40px;
+}
+.how-does__item::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  counter-increment: myCount;
+  content:counter(myCount);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-weight: 700;
+  background-color: var(--blue);
+  color: var(--white);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.video-play {
+  padding-bottom: 150px;
+}
+
+.video-play__titel {
+  margin-bottom: 20px;
+}
+
+.video-play__text {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.video-play__content {
+  margin: 0 auto;
+  display: block;
+}
+
+.important {
+  padding-bottom: 150px;
+}
+
+.important-titel {
+  margin-bottom: 20px;
+}
+
+.important__text {
+  max-width: 580px;
+  margin: 0 auto 50px;
+}
+
+.important__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.important__img {
+  margin-bottom: 20px;
 }
